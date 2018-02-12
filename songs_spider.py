@@ -3,8 +3,6 @@ import requests
 import re
 from datetime import datetime
 import time
-#import pandas as pd
-#from pandas.io import sql
 from sqlalchemy import create_engine
 from sqlalchemy import Table, Column, Integer, DateTime, NVARCHAR, MetaData
 from sqlalchemy.dialects.mysql import insert
@@ -66,13 +64,6 @@ timestamps=[]
 for dt in datetimes:
     timestamps.append(int(time.mktime(dt.timetuple())))
 #print(timestamps)
-
-#Creating dataframe with collected data
-#df = pd.DataFrame({'timestamp' : timestamps,
-#                   'datetime' : datetimes,
-#                   'singer' : artists,
-#                   'title' : titles
-#                   })
 
 #Establishing connection to db
 engine = create_engine('mysql+mysqlconnector://conducteur:conducteur@192.168.0.103:3307/purefm', echo=False)
