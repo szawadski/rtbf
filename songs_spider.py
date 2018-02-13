@@ -71,7 +71,7 @@ conn = engine.connect()
 
 #Define the tables
 metadata = MetaData()
-conducteur = Table('conducteur', metadata,
+conducteur = Table('conducteur_test', metadata,
                        Column('timestamp',Integer, primary_key=True),
                        Column('datetime', DateTime),
                        Column('artist', NVARCHAR(length=50)),
